@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: musicmatch
+  name: musicmatch
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: musicmatch
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: musicmatch
+    spec:
+      containers:
+      - image: mrudula123/springbootexample
+        name: musicmatch
+        ports:
+        - containerPort: 5050
+        resources: {}
+status: {}
